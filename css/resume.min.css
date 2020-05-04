@@ -69,6 +69,7 @@ p.lead {
 .social-icons a:hover {
   background-color: hsl(250, 50%, 40%);
 }
+
 .dev-icons {
   font-size: 3rem;
 }
@@ -79,6 +80,10 @@ p.lead {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+}
+#sideNav .navbar-nav .nav-item:last-child {
+  background-color: hsl(250, 50%, 50%);
+  border-radius: 10px;
 }
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
