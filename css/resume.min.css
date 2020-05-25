@@ -29,9 +29,29 @@ h6 {
   text-transform: uppercase;
   color: #343a40;
 }
+.divh1 {
+  display: flex;
+}
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
+}
+h1:after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+  color: #868e96;
+  font-size: 6rem;
+}
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 h2 {
   font-size: 3.5rem;
@@ -81,10 +101,14 @@ p.lead {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
-#sideNav .navbar-nav .nav-item:last-child {
-  background-color: hsl(250, 50%, 50%);
-  border-radius: 10px;
+.nav-color {
+  color: hsl(250, 50%, 50%) !important;
 }
+.nav-color:hover {
+  color: white !important;
+  opacity: 0.8;
+}
+
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
 }
@@ -105,9 +129,12 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid hsl(250, 50%, 40%);
+    max-width: 12rem;
+    max-height: 12rem;
+    border: 0.3rem solid hsl(250, 50%, 40%);
+  }
+  #sideNav .navbar-brand .img-profile:hover {
+    cursor: initial;
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -125,6 +152,13 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+  }
+  #sideNav .navbar-nav .nav-item:last-child {
+    background-color: hsl(250, 50%, 50%);
+    border-radius: 1rem;
+  }
+  .nav-color {
+    color: #868e96 !important;
   }
 }
 section.resume-section {
